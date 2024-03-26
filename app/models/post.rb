@@ -14,10 +14,17 @@ class Post < ApplicationRecord
 
   has_one_attached :photo
 
-  validates :photo, :user_id, presence: true
+  validates :photo, presence: true
 
   validates :title, presence: true, length: { minimum: 30 }
 
   validates :description, presence: true, length: { minimum: 100 }
+
+  has_many :comments
+
+  has_many :likes
+
+  has_many :bookmarks
+
 
 end
