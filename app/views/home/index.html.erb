@@ -1,22 +1,3 @@
-
-<nav class="bg-white border-gray-200 font-dosis">
-   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 md:p-4 mb-5">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap font-pacifico text-[35px] tracking-[2px] text-black">Post It</span>
-    </a>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
-        <% if user_signed_in? %>
-            <%= link_to "Sign Out",destroy_user_session_path, method: :delete, class: "text-[#337ab7]", data: { turbo_confirm: 'Are you sure?', "turbo-method": :delete } %>
-            <%= link_to "Edit",edit_user_registration_path,class: "text-[#337ab7]" %>
-        <% else %>
-            <%= link_to "Log In ",new_user_session_path, class: "text-[#337ab7]" %> 
-            <%= link_to "Sign Up",new_user_registration_path, class: "text-[#337ab7]"%>
-        <% end %>
-      </ul>
-     </div>
-    </div>
-</nav>
 <div class="px-5">
 <h1>Hello User</h1>
 </div>

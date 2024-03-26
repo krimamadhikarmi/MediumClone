@@ -1,0 +1,8 @@
+<h1>Hello</h1>
+<% @posts.each do |post| %>
+  <%= image_tag post.user.photo if post.user.photo.attached? %> <br/>
+  <%= post.user.email.split('@').first %><br/>
+  <%= post.title%>
+  <%= image_tag post.photo %>
+  <%= post.description %>
+<% end %>
