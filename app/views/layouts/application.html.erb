@@ -55,9 +55,12 @@
   </head>
 
   <body>
+    <%= render 'shared/nav' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render 'shared/nav' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
+    
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
