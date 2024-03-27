@@ -1,6 +1,6 @@
 class BookmarksController < ApplicationController
   before_action :authenticate_user!
-  
+
   def create
     @post = Post.find(params[:post_id])
     @bookmark = current_user.bookmarks.new(post: @post)
@@ -15,7 +15,7 @@ class BookmarksController < ApplicationController
   def destroy
       @bookmark = current_user.bookmarks.find(params[:id])
       @bookmark.destroy
-      redirect_to @bookmark.post, notice: 'Post unliked'
+      redirect_to @bookmark.post, notice: 'Post unmarked'
   end
 
 end
